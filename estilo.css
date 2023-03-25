@@ -4,29 +4,35 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-  .container{
+/*Header, onde está o título e o ícone para clique do sidebar*/
+.w3-container{
+  background-color: #3EA99F;
+}
+ 
+/*Div onde estão as bandeiras*/
+.container{
     display: grid;
     grid-template-columns: repeat(4,400px);
     padding: 10px;
     width: 100%;
     margin: 0 auto; 
-    margin-bottom: 50px;
-  }
+    margin-bottom: 10px; 
+}
   
-  .container img {        
+.container img {        
     height: auto;
     transition: transform .2s ease-out;
-  }
+}
 
-  .container img:hover {
+.container img:hover {
     transform: scale(1.1);
-  }
+}
     
-  .container image{
-        filter: grayscale(0%);
-  }
+.container image{
+    filter: grayscale(0%);
+}
 
-  .containerCards{
+.containerCards{
     display: grid;
     grid-template-columns: repeat(3,400px);
     padding: 10px;
@@ -35,28 +41,34 @@ body {
     margin-left: -230px;
 }
 
-  #brasil, #canada, #australia{
+/*Bandeiras. Agrupar em classes para fazer o resize não deu certo (todas estão na classe "bandeira"*/
+#brasil, #canada, #australia{
     height: 150px;
     width: 230px;
     filter: grayscale(100%);
     margin-left: 30px;
     margin-top: 20px;
-  }
+    border-radius: 9px;
+}
 
-  #card-plus{
+
+/*Símbolo adicionar (ao lado da bandeira da austrália*/
+#card-simbolo-adicionar{
     margin-top: 50px;
     height: 90px;
     width: 90px;
-  }
+}
 
-  #plus{
+
+#simbolo-adicionar{
     height: 80px;
     width: 80px;
     margin-left: 5px;
     margin-top: 5px;
-  }
+}
 
-.card-panel{
+.card-bandeira{
+    border-radius: 9px;
     width: 300px;
     height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -68,6 +80,7 @@ body {
     text-align: center;
     position:  sticky;
     margin-left: 270px;
+    margin-bottom: 10px;
     width: 400px;
     height: 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -87,9 +100,21 @@ h1{
    text-align: center;
 } 
 
-.div-paises :hover{
-    background-color: #aba3a1 ;
+/*Países na sidebar*/
+.div-paises{
+    background-color:  rgba(233, 233, 233, 0.83) ;
+    margin-bottom: 2px;
+    margin-left: 6px;
+    padding-left: 8px;
+    font-weight: 450;
+    border-radius: 5px;
 }
+
+.div-paises:hover{
+  /* background-color:#3EA99F; */
+  background-color: rgba(47, 137, 216, 0.521);
+}
+
 
 h2, p{
     margin-left: 15px;
@@ -102,8 +127,100 @@ h2, p{
     left: 90%;
 }
 
-/*tabela*/
+.footer{
+  margin: 10px;
+  background-color: #3EA99F; 
+  padding: 20px; 
+  text-align: center;
+  border-radius: 18px;
+}
 
+/*Cards - "Informações covid-19" e "Funcionalidade extra..."*/
+
+.info{
+    margin: 10px;    
+    max-width: 720px;
+    padding: 1rem;
+    background-color: rgba(233, 233, 233, 0.83);
+    border-radius: 10px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+}
+
+/*linha lateral ao lado dos cards */
+#left-info{
+    border-left: 6px solid  rgba(47, 137, 216, 0.521);
+    height: 100px;
+    margin-left: -3px;
+    margin-top: 5px;
+    top: 0;
+    float: left;
+    margin-right: 7px;
+
+}
+  
+.title {
+    margin-left: 15px;
+    font-weight: 600;
+    color: rgb(31 41 55);
+}
+
+
+  
+  
+a:hover {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+}
+  
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+    flex-shrink: 0;
+}
+  
+.botaoVerificar {
+    margin-top: -5px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    background-color: rgb(17 24 39);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    border: none;
+    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+  
+.botaoVerificar:hover {
+    background-color: rgb(55 65 81);
+}
+  
+.botaoVerificar:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+#pais1, #pais2, .botaoVerificar {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+/*Tabelas geradas na página "paises.php*/
+
+table{
+  width:100%;
+  min-width:500px;
+  border-collapse:collapse;  
+  font-weight:bold;
+}
 
 td{    
     box-sizing:border-box;
@@ -111,24 +228,9 @@ td{
     
 }
 
-table{
-    width:100%;
-    min-width:500px;
-    border-collapse:collapse;  
-    font-weight:bold;
-}
-
 tr{
     height:50px;
     background:#f6f3f7 - #222;
     border-bottom:rgba(0,0,0,.05) 1px
 }
-
-.tr1{
-   
-    background:#418a95 + #222;
-    color:#f6f3f7; 
-    font-size:8pt;
-    border:0px solid;
-}  
 
