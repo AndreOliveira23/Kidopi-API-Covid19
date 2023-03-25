@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <title>API Covid-19 - Kidopi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,56 +75,22 @@
         <div class="actions">
           <form action="bonus.php" method="POST" id="form">
 
-            <!-- Dados do país 1 -->
+            <!-- Select do país 1 -->
             <select id="pais1" name="pais1">
               <?php
-                $url = "https://dev.kidopilabs.com.br/exercicio/covid.php?listar_paises=1";
-                $paises = json_decode(file_get_contents($url),true);//Trazendo dados da URL para um array associativo
-                foreach ($paises as $pais) {
-                  echo "<option value=\"$pais\">$pais</option>";
-                }
+                criarSelectOption();
               ?>
             </select>
 
-            <!-- Dados do país 2 -->
+            <!-- Select do país 2 -->
             <select id="pais2" name="pais2">
               <?php
-                $url = "https://dev.kidopilabs.com.br/exercicio/covid.php?listar_paises=1";
-                $paises = json_decode(file_get_contents($url),true);//Trazendo dados da URL para um array associativo
-                foreach ($paises as $pais) {
-                  echo "<option value=\"$pais\">$pais</option>";
-                }
+                criarSelectOption();
               ?>
             </select>
             <input type="submit" class="botaoVerificar" value="Verificar" onclick="verificar()">
           </form>
         </div>
     </div>  
-
-  <script> 
-    //Função ara abrir as páginas php que tratam os dados dos países na div "conteúdo"
-  function loadPage(event) {
-      event.preventDefault(); 
-      var url = "";
-      if (event.target.className == 'bandeira'){
-        event = event.target.parentNode;
-        url = event['attributes']['href']['nodeValue'];
-      } else {
-        url = event.target.href;
-      }
-    
-      var xhr = new XMLHttpRequest(); 
-    
-      xhr.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("content").innerHTML = this.responseText; 
-        }
-      };
-    
-      xhr.open("GET", url, true); 
-      xhr.send(); 
-  }
-
-  </script>
 </body>
 </html>

@@ -5,14 +5,12 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="estilo.css">
 <script src="main.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <body>
 
   <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
     <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Fechar &times;</button>
     <h5>Escolha outro país...(Nomes em inglês)</h5>
     <?php
-        echo "a";
         include('funcoes.php');
         include('footer.php');
         $pais1 = $_POST['pais1'];
@@ -21,7 +19,6 @@
             header('Location: index.php');
             exit();
         }
-        var_dump($pais1);
     ?>   
   </div>
 
