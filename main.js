@@ -39,3 +39,27 @@ function w3_open() {
   function paginaInicial(){
     window.location.href = "index.php";
   }
+
+   //Função ara abrir as páginas php que tratam os dados dos países na div "conteúdo"
+
+  function loadPage(event) {
+    event.preventDefault(); 
+    var url = "";
+    if (event.target.className == 'bandeira'){
+      event = event.target.parentNode;
+      url = event['attributes']['href']['nodeValue'];
+    } else {
+      url = event.target.href;
+    }
+  
+    var xhr = new XMLHttpRequest(); 
+  
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("content").innerHTML = this.responseText; 
+      }
+    };
+  
+    xhr.open("GET", url, true); 
+    xhr.send(); 
+} 
