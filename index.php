@@ -28,7 +28,7 @@
       foreach ($paises as $pais) {
         echo "<div class='div-paises'>";
         $pais2 = str_replace(" ", "+",$pais);
-        echo '<a href="OutroPais.php?pais='.$pais2.'" onclick="loadPage(event)">'.$pais.'</a><br>';  
+        echo '<a href="paises.php?pais='.$pais2.'" onclick="loadPage(event)">'.$pais.'</a><br>';  
         echo "</div>";
       }
      
@@ -52,13 +52,13 @@
     <div class="container">
 
       <div class="card-bandeira">
-        <abbr title="Brasil"><a href="OutroPais.php?pais=Brazil" onclick="loadPage(event)" ><img src="brasil.jpg" alt="Bandeira do Brasil" id="brasil" class="bandeira" onmouseover="fadeIn('brasil')" onmouseout="fadeOut('brasil')"></a></abbr>
+        <abbr title="Brasil"><a href="paises.php?pais=Brazil" onclick="loadPage(event)" ><img src="brasil.jpg" alt="Bandeira do Brasil" id="brasil" class="bandeira" onmouseover="fadeIn('brasil')" onmouseout="fadeOut('brasil')"></a></abbr>
       </div>
       <div class="card-bandeira">
-        <abbr title="Canadá"><a href="OutroPais.php?pais=Canada" onclick="loadPage(event)"><img src="canada.png" alt="Bandeira do Canadá"  id="canada" class="bandeira" onmouseover="fadeIn('canada')" onmouseout="fadeOut('canada')"></a></abbr>
+        <abbr title="Canadá"><a href="paises.php?pais=Canada" onclick="loadPage(event)"><img src="canada.png" alt="Bandeira do Canadá"  id="canada" class="bandeira" onmouseover="fadeIn('canada')" onmouseout="fadeOut('canada')"></a></abbr>
       </div>
       <div class="card-bandeira">
-        <abbr title="Austrália"><a href="OutroPais.php?pais=Australia" onclick="loadPage(event)"><img src="australia.jpeg" alt="Bandeira da austrália"  id="australia" class="bandeira" onmouseover="fadeIn('australia')" onmouseout="fadeOut('australia')"></a></abbr>
+        <abbr title="Austrália"><a href="paises.php?pais=Australia" onclick="loadPage(event)"><img src="australia.jpeg" alt="Bandeira da austrália"  id="australia" class="bandeira" onmouseover="fadeIn('australia')" onmouseout="fadeOut('australia')"></a></abbr>
       </div>
       <div class="card-bandeira" id="card-simbolo-adicionar">
       <abbr title="Escolher outro país"><a href="#" onclick="w3_open()"><img src="plus.png" alt="Símbolo de 'adicionar' " id="simbolo-adicionar" class="bandeira" ></a></abbr>
